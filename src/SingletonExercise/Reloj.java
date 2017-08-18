@@ -45,11 +45,24 @@ public class Reloj
         return reportDate;
     }
     
-    
+    public String getHora(){
+        Calendar cal1 = Calendar.getInstance();
+        
+        int hora = cal1.get(Calendar.HOUR_OF_DAY);
+        int minutos = cal1.get(Calendar.MINUTE);
+        int segundos = cal1.get(Calendar.SECOND);
+        
+        System.out.println(hora + " hora");
+        System.out.println(minutos + " minutos");
+        System.out.println(segundos + " segundos");
+
+        return null;
+    }
     
     public static void main(String[]args){
         Reloj reloj1 = new Reloj();
         reloj1.getFecha();
+        reloj1.getHora();
     }
 }    
     /*public String setHora(){
